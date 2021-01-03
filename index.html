@@ -45,6 +45,17 @@
     <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="robots" content="index, follow" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126939217-2');
+    </script>
     <!-- Google Site Verification for indexing -->
     <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
@@ -114,36 +125,40 @@
             </li>
         </ul>
     </nav>
-    <nav class="hide-on-large only trigger z-depth-1">
-        <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        <div class="name-title">
-            <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Ceciia Barasa</a><span class="black-text">Software Developer</span>
-        </div>
-    </nav>
-    <nav class="hide-on-large only">
-        <ul id="slide-out" class="side-nav">
-            <li class="bold">
-                <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-            </li>
 
-            <li class="bold">
-                <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+    <div class="">
+        <nav class="hide-on-large only trigger z-depth-1">
+            <a aria-label="Toggle visibility of the mobile navbar" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            <div class="name-title">
+                <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Ceciia Barasa</a><span class="black-text">Software Developer</span>
+            </div>
+        </nav>
+
+        <nav class="hide-on-large only ">
+            <ul id="slide-out" class="side-nav">
+                <li class="bold">
+                    <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+                </li>
+
+                <li class="bold">
+                    <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
             class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-            </li>
-            <li class="bold">
-                <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+                </li>
+                <li class="bold">
+                    <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
             class="mdi-action-assessment small"></i><span>Skills</span></a>
-            </li>
-            <li class="bold">
-                <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+                </li>
+                <li class="bold">
+                    <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
             class="mdi-content-mail small"></i><span>Contact</span></a>
-            </li>
-            <li class="bold">
-                <a aria-label="Open Ceclia's Resume in a new tab" href="https://drive.google.com/file/d/1UnkFz-mCDydBfK264TtFRCSQFQ4MJucX/view?usp=sharing" target="_blank" class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-            </li>
-        </ul>
-    </nav>
+                </li>
+                <li class="bold">
+                    <a aria-label="Open Ceclia's Resume in a new tab" href="https://drive.google.com/file/d/1UnkFz-mCDydBfK264TtFRCSQFQ4MJucX/view?usp=sharing" target="_blank" class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <main>
 
         <!-- First Section: Heading lines and image -->
@@ -526,22 +541,34 @@
     </main>
 
 
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script type="text/javascript">
+        var typed = new Typed('.typing', {
+            strings: ["Pythonist", "Developer", "ML Enthusiast", "Fast Learner"],
+            loop: true,
+            typeSpeed: 80,
+            backSpeed: 40
+        });
+    </script>
 
+
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!-- Materialize - Compiled and minified JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script>
+        // Materialize - Initializers
+        $(document).ready(function() {
+            $(".scrollspy").scrollSpy()
+                // Initialize collapse button
+            $(".button-collapse").sideNav({
+                menuWidth: 190, // Default is 240
+                edge: "left", // Choose the horizontal origin
+                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            })
+        })
+    </script>
 </body>
-<script src="/assets/js/script.js">
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
-<script type="text/javascript">
-    var typed = new Typed('.typing', {
-        strings: ["Pythonist", "Developer", "Tech Enthusiast", "Fast Learner"],
-        loop: true,
-        typeSpeed: 80,
-        backSpeed: 40
-    });
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-
 
 </html>
