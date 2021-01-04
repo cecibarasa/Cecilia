@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 .profile-pic {
     position: relative;
     max-width: 130px;
@@ -64,8 +68,6 @@
     transform: scale(1.10);
     color: #FFFFFF;
 }
-
-.activator:hover {}
 
 .linkedin:hover {
     background-color: #0077b5;
