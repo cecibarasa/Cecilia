@@ -338,6 +338,10 @@ h3 {
     position: relative;
   } */
 
+#intro {
+    height: 25em;
+}
+
 #intro.section {
     background: #a7ffeb repeat;
     position: relative;
