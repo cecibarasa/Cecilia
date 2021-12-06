@@ -5,6 +5,14 @@ const projectcards = document.querySelector(".projectcards");
 // Array of object for projects
 const projects = [
   {
+    title: "Facebook Clone",
+    cardImage: "assets/images/project-page/face.jpeg",
+    description: "A Facebook clone built using ReactJS with Firebase authentication.",
+    tagimg: "https://www.clipartkey.com/mpngs/m/197-1972428_angularjs-angular-js-icon-png.png",
+    Previewlink: "https://facebook-clonnee.netlify.app/",
+    Githublink: "https://github.com/cecibarasa/fb-clone",
+  },
+  {
     title: "Quiz App",
     cardImage: "assets/images/project-page/quiz.jpg",
     description: "A quiz app built using angularjs, python and django.",
@@ -49,7 +57,6 @@ const projects = [
     cardImage: "assets/images/project-page/hangman.jpg",
     description: "Hangman game built using python.",
     tagimg: "https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png",
-    // Previewlink: "",
     Githublink: "https://github.com/cecibarasa/Hangman",
   },
   {
@@ -85,14 +92,14 @@ const projects = [
     Previewlink: "https://cecibarasa.github.io/birth-day/",
     Githublink: "https://github.com/cecibarasa/birth-day",
   },
-  {
-    title: "GitHub Search",
-    cardImage: "assets/images/project-page/github.png",
-    description: "A WebApp that allows you to search for a GitHub Profile and GitHub Repository.",
-    tagimg: "https://cdn-images-1.medium.com/max/1200/1*iDQvKoz7gGHc6YXqvqWWZQ.png",
-    Previewlink: "https://cecibarasa.github.io/gitSearch/",
-    Githublink: "https://github.com/cecibarasa/gitSearch",
-  },
+  // {
+  //   title: "GitHub Search",
+  //   cardImage: "assets/images/project-page/github.png",
+  //   description: "A WebApp that allows you to search for a GitHub Profile and GitHub Repository.",
+  //   tagimg: "https://cdn-images-1.medium.com/max/1200/1*iDQvKoz7gGHc6YXqvqWWZQ.png",
+  //   Previewlink: "https://cecibarasa.github.io/gitSearch/",
+  //   Githublink: "https://github.com/cecibarasa/gitSearch",
+  // },
   {
     title: "The Galleria",
     cardImage: "assets/images/project-page/gallery.jpg",
