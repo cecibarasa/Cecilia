@@ -4,10 +4,17 @@
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
+    title: "Web Development Executive",
+    cardImage: "assets/images/experience-page/brandking.jpeg",
+    place: "Brandking Digital Agency",
+    time: "(Nov, 2021 to Present)",
+    desp: "<li>Created static websites for shockwaves, kulan cafe, and dentmind companies.</li> <li>Added data to Littlekings website.</li> <li>Created Kiomobee website.</li> <li>Updated Brandking Digital Agency website.</li> <li>Created Shockwaves Investments website.</li> <li>Created Polaris Connect website.</li>"
+  },
+  {
     title: "Web Development Intern",
     cardImage: "assets/images/experience-page/brandking.jpeg",
     place: "Brandking Digital Agency",
-    time: "(Jul, 2021 to Present",
+    time: "(Jul, 2021 to Oct, 2021)",
     desp: "<li>Created email signatures for Brandking Digital Agency and Safari Afrika.</li> <li>Added tours to Safari Afrika website.</li> <li>Created a chatbot for Safari Afrika and Brandking Digital Agency.</li> <li>Updated Brandking Digital Agency website.</li> <li>Updated The Jacaranda Hotel website.</li> <li>Added content to LittleKings website.</li>"
   },
   {
