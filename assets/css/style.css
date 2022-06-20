@@ -39,8 +39,8 @@ html[data-theme="dark"] {
   --bg-nav-img: linear-gradient(315deg, #6617cb 0%, #882463 74%);
   --bg-footer: linear-gradient(315deg, #6617cb 0%, #882463 74%);
   --bg: #191919;
-  --text: #ffffff;
-  --text-color: #fff;
+  --text: #ffffff !important;
+  --text-color: #fff !important;
   --bg-txt-img: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
   --txt-fill: transparent;
   --col-icon: white;
@@ -296,7 +296,11 @@ html[light-mode="dark"] {
 
 .dark-theme .navbar-nav .nav-link,
 .dark-theme .navbar-brand {
-  color: rgba(255, 255, 255, 0.5);
+  color: #d3d0d0;
+}
+
+.dark-theme .navbar-brand:hover {
+  color: #fff;
 }
 
 .dark-theme .nav-link:hover{
