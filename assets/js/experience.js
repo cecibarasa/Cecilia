@@ -7,8 +7,8 @@ const exp = [
     title: "Web Development Executive",
     cardImage: "assets/images/experience-page/brandking.jpeg",
     place: "Brandking Digital Agency",
-    time: "(Nov, 2021 to Present)",
-    desp: "<li>Created static websites for shockwaves, kulan cafe, and dentmind companies.</li> <li>Added data to Littlekings website.</li> <li>Created Kiomobee website.</li> <li>Updated Brandking Digital Agency website.</li> <li>Created Shockwaves Investments website.</li> <li>Created Polaris Connect website.</li>"
+    time: "(Nov, 2021 to April 2022)",
+    desp: "<li>Created Polaris Connect website.</li> <li>Created Shockwaves Investments website.</li> <li>Updated Brandking Digital Agency website.</li> <li>Created Kiomobee website.</li> <li>Added data to Littlekings website.</li><li>Created static websites for shockwaves, kulan cafe, and dentmind companies.</li> "
   },
   {
     title: "Web Development Intern",
