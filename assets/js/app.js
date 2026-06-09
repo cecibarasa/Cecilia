@@ -178,8 +178,6 @@ let footer = $(`
 //"Scroll to top" button
 let upArrow = $(`
   <button id="btnScrollToTop" onclick="scrollToTop()"><i class="fas fa-2x fa-angle-up"></i></button>
-  <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  })
 `);
 
 //function for the "Scroll To Top" button to detect the footer
@@ -223,23 +221,51 @@ $(function () {
 
   //toggler hamburger functions
   const menuBtn = document.querySelector(".navbar-toggler");
+  const navMenu = document.querySelector("#navbarSupportedContent");
+  const hamburgerIcon = document.querySelector("#js-hamburger");
   let menuOpen = false;
-  menuBtn.addEventListener("click", () => {
-    if (!menuOpen) {
-      menuBtn.classList.add("open");
-      menuOpen = true;
-    } else {
-      menuBtn.classList.remove("open");
-      menuOpen = false;
+
+  const closeMenu = () => {
+    if (!menuBtn || !navMenu) return;
+    menuBtn.classList.remove("open");
+    navMenu.classList.remove("show");
+    menuBtn.setAttribute("aria-expanded", "false");
+    hamburgerIcon?.classList.remove("is-active");
+    menuOpen = false;
+  };
+
+  const toggleMenu = () => {
+    if (!menuBtn || !navMenu) return;
+    menuOpen = !menuOpen;
+    menuBtn.classList.toggle("open", menuOpen);
+    navMenu.classList.toggle("show", menuOpen);
+    menuBtn.setAttribute("aria-expanded", String(menuOpen));
+    hamburgerIcon?.classList.toggle("is-active", menuOpen);
+  };
+
+  if (menuBtn) {
+    menuBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleMenu();
+    });
+  }
+
+  navMenu?.querySelectorAll("a.nav-link").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menuOpen) return;
+    if (!menuBtn?.contains(event.target) && !navMenu?.contains(event.target)) {
+      closeMenu();
     }
   });
-});
 
-// function for toggling hamburger is-active class
-
-$(function () {
-  $("#js-hamburger").on("click", function () {
-    $(this).toggleClass("is-active");
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 991) {
+      closeMenu();
+    }
   });
 });
 
