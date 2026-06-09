@@ -16,7 +16,7 @@ let header = $(`
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">Experience</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="seo.html">SEO Portfolio</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Projects</a></li>
    <li class="nav-item">
    <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
@@ -279,6 +279,7 @@ $(document).ready(function () {
 if (localStorage.getItem("lightMode") == "dark") {
   var app = document.getElementsByTagName("HTML")[0];
   app.setAttribute("light-mode", "dark");
+  app.setAttribute("data-theme", "dark");
 
   //to add dark theme to nav bar after its been loaded
   window.addEventListener("load", function () {
@@ -302,6 +303,7 @@ function toggle_light_mode() {
   if (localStorage.lightMode == "dark") {
     localStorage.lightMode = "light";
     app.setAttribute("light-mode", "light");
+    app.setAttribute("data-theme", "light");
     nav.classList.remove("dark-theme");
     var sc = document.getElementsByClassName("socialicon");
     for (var i = 0; i < sc.length; i++) {
@@ -311,6 +313,7 @@ function toggle_light_mode() {
     nav.classList.add("dark-theme");
     localStorage.lightMode = "dark";
     app.setAttribute("light-mode", "dark");
+    app.setAttribute("data-theme", "dark");
     var sc = document.getElementsByClassName("socialicon");
     for (var i = 0; i < sc.length; i++) {
       sc[i].classList.add("dsc");
@@ -321,8 +324,10 @@ function toggle_light_mode() {
 window.addEventListener("storage", function () {
   if (localStorage.lightMode == "dark") {
     app.setAttribute("light-mode", "dark");
+    app.setAttribute("data-theme", "dark");
   } else {
     app.setAttribute("light-mode", "light");
+    app.setAttribute("data-theme", "light");
   }
 });
 

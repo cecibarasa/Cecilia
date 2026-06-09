@@ -1,0 +1,205 @@
+:root {
+  --seo-accent: #6a00bb;
+  --seo-accent-soft: #f3e8ff;
+  --seo-card-bg: #ffffff;
+  --seo-border: rgba(106, 0, 187, 0.12);
+  --seo-hero-surface: linear-gradient(135deg, var(--seo-accent-soft), rgba(255,255,255,0.95));
+  --seo-card-surface: linear-gradient(135deg, rgba(106, 0, 187, 0.14), rgba(255,255,255,0.95));
+  --seo-card-border: rgba(106, 0, 187, 0.08);
+}
+
+html[data-theme="dark"],
+html[light-mode="dark"] {
+  --seo-accent: #bb86fc;
+  --seo-accent-soft: rgba(187, 134, 252, 0.15);
+  --seo-card-bg: #1f1f1f;
+  --seo-border: rgba(187, 134, 252, 0.2);
+  --seo-hero-surface: linear-gradient(135deg, rgba(187, 134, 252, 0.2), rgba(31, 31, 31, 0.95));
+  --seo-card-surface: linear-gradient(135deg, rgba(187, 134, 252, 0.18), rgba(31, 31, 31, 0.96));
+  --seo-card-border: rgba(187, 134, 252, 0.16);
+}
+
+.seo-page {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: linear-gradient(180deg, rgba(106, 0, 187, 0.04), transparent 25%);
+  min-height: 100vh;
+}
+
+.seo-hero {
+  padding: 2rem 0 1rem;
+}
+
+.seo-illustration {
+  min-height: 340px;
+  border-radius: 28px;
+  background: var(--seo-hero-surface);
+  border: 1px solid var(--seo-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 1.15rem;
+  box-shadow: 0 16px 40px rgba(106, 0, 187, 0.08);
+}
+
+.seo-screenshot {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.seo-illustration::before,
+.seo-illustration::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(106, 0, 187, 0.1);
+}
+
+.seo-illustration::before {
+  width: 180px;
+  height: 180px;
+  top: -30px;
+  right: -40px;
+}
+
+.seo-illustration::after {
+  width: 120px;
+  height: 120px;
+  bottom: -25px;
+  left: -15px;
+}
+
+.seo-illustration-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2rem;
+  border-radius: 20px;
+  background: var(--seo-card-bg);
+  border: 1px solid var(--seo-border);
+}
+
+.seo-illustration-inner span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--seo-accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.seo-illustration-inner strong {
+  font-size: 2rem;
+  color: var(--text);
+  margin-top: 0.25rem;
+}
+
+.main-heading {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 0.85rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.my_projects {
+  color: var(--seo-accent);
+}
+
+.pre-heading {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 540px;
+  margin-bottom: 1.1rem;
+}
+
+.project-box {
+  padding: 20px 0 40px;
+}
+
+.page-content {
+  margin: 0;
+}
+
+.seo-card-wrapper {
+  background: var(--seo-card-surface);
+  border: 1px solid var(--seo-card-border);
+  border-radius: 18px;
+  min-height: 21.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  padding: 30px;
+}
+
+.seo-callout-row {
+  min-height: auto;
+  padding: 2rem 2.2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.13);
+}
+
+.seo-callout-row h3 {
+  color: var(--text);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.seo-callout-row p {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 0;
+  max-width: 760px;
+}
+
+.btn-seo-primary,
+.btn-seo-outline {
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  margin-top: 0.9rem;
+  display: inline-block;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-seo-primary {
+  background: var(--seo-accent);
+  color: #fff;
+  border: 1px solid var(--seo-accent);
+  box-shadow: 0 8px 20px rgba(106, 0, 187, 0.2);
+}
+
+.btn-seo-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(106, 0, 187, 0.24);
+}
+
+.btn-seo-outline {
+  border: 1px solid var(--seo-accent);
+  color: var(--seo-accent);
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .seo-page {
+    padding-top: 70px;
+  }
+
+  .seo-illustration {
+    min-height: 220px;
+  }
+}
